@@ -16,13 +16,11 @@
         let computerinput = '';
 
         let randomNumber;
-        console.log(randomNumber);
-        function compinput(){
-            
 
-            if (randomNumber < (1/3)){
+        function compinput(){
+            if (randomNumber < (1/3) && randomNumber >= 0){
                 computerinput = 'rock';
-            } else if (randomNumber < (2/3)){
+            } else if (randomNumber < (2/3) && randomNumber >= (1/3)){
                 computerinput = 'paper';
             } else{
                 computerinput = 'scissors';
@@ -38,7 +36,7 @@
 
             if (userinput === 'rock' && compinput() === 'paper'){
                 win++;
-            }
+            }`
             else if (userinput === 'rock' && compinput() === 'scissors'){
                 lose++;
             } else if (userinput === 'rock' && compinput() === 'rock'){
