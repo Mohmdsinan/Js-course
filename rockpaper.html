@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button class="rock" onclick="play('rock')">Rock</button>
+    <button class="paper" onclick="play('paper')">Paper</button>
+    <button class="scissors" onclick="play('scissors')">Scissors</button>
+
+    <script>
+        let computerinput = '';
+
+        let randomNumber;
+        console.log(randomNumber);
+        function compinput(){
+            
+
+            if (randomNumber < (1/3)){
+                computerinput = 'rock';
+            } else if (randomNumber < (2/3)){
+                computerinput = 'paper';
+            } else{
+                computerinput = 'scissors';
+            }
+
+            return computerinput;
+        }
+        let win = 0, lose = 0, draw = 0;
+
+        function play(userinput){
+            randomNumber = Math.random();
+            console.log(randomNumber);
+
+            if (userinput === 'rock' && compinput() === 'paper'){
+                win++;
+            }
+            else if (userinput === 'rock' && compinput() === 'scissors'){
+                lose++;
+            } else if (userinput === 'rock' && compinput() === 'rock'){
+                draw++;
+            }
+
+            if (userinput === 'paper' && compinput() === 'paper'){
+                draw++;
+            }
+            else if (userinput === 'paper' && compinput() === 'scissors'){
+                lose++;
+            } else if (userinput === 'paper' && compinput() === 'rock'){
+                win++;
+            }
+
+            if (userinput === 'scissors' && compinput() === 'paper'){
+                win++;
+            }
+            else if (userinput === 'scissors' && compinput() === 'scissors'){
+                draw++;
+            } else if (userinput === 'scissors' && compinput() === 'rock'){
+                lose++;
+            }
+
+            alert(`user input : ${userinput}, computer input : ${computerinput}
+             Win : ${win}, Lose : ${lose}, Draw : ${draw}`);
+            
+
+        }
+
+
+    </script>
+</body>
+</html>
