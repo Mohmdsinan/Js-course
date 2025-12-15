@@ -1,0 +1,25 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.js-subscribe-button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.js-input-box{
+    padding: 10px;
+    
+}
+
+.calculate{
+    padding: 11px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+}

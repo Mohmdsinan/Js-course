@@ -2,15 +2,26 @@
 <html lang="en">
 <head>
     <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="rockpaper.css">
 </head>
 <body>
-    <p>Rock Paper Scissors</p>
-    <button class="rock" onclick="play('rock')">Rock</button>
-    <button class="paper" onclick="play('paper')">Paper</button>
-    <button class="scissors" onclick="play('scissors')">Scissors</button>
+    <p class="rps-heading">Rock Paper Scissors</p>
+    <button class="rock emoji-button" onclick="play('rock')">
+        <img src="pictures/rock-emoji.png" alt="rock" class="emoji">
+    </button>
 
+    <button class="paper emoji-button" onclick="play('paper')">
+        <img src="pictures/paper-emoji.png" alt="paper" class="emoji">
+    </button>
+
+    <button class="scissors emoji-button" onclick="play('scissors')">
+        <img src="pictures/scissors-emoji.png" alt="scissors" class="emoji">
+    </button>
+    
     <p class="js-result"></p>
     <p class="js-moves"></p>
+    <br><br>
     <p class="js-scores"></p>
 
     <button class="reset" onclick="reset()">Reset score</button>
@@ -88,7 +99,12 @@
             localStorage.setItem('score', JSON.stringify(score));
             updateScore();
             document.querySelector('.js-result').innerHTML = result;
-            document.querySelector('.js-moves').innerHTML = `You ${userinput} - ${computerMove} Computer`;
+            document.querySelector('.js-moves').innerHTML = `
+            You
+            <img src="pictures/${userinput}-emoji.png" class="move-icon">
+            <img src="pictures/${computerMove}-emoji.png" class="move-icon">
+            Computer
+            `;
 
 
           
