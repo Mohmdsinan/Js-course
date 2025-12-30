@@ -9,10 +9,18 @@
     border: none;
     padding: 10px;
     border-radius: 20px;
+    width: 100px;
+}
+.is-subscribed{
+    background-color: rgb(220, 220, 220);
+    color: black;
+
 }
 
 .js-input-box{
     padding: 10px;
+    border-style: solid;
+    border-radius: 3px;
     
 }
 

@@ -25,11 +25,13 @@ body{
     margin: 5px 10px;
 }
 
-.reset{
+.reset,
+.auto-play{
     padding: 10px;
     width: 130px;
     font-size: 17px;
 }
+
 
 .js-result{
     font-weight: bold;

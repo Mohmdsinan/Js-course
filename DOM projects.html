@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
 
-    <link rel="stylesheet" href="DOM projects.css">
+    <link rel="stylesheet" href="Styles/DOM projects.css">
 </head>
 <body>
     <div class="youtube-container">
@@ -40,9 +40,11 @@
             const buttonElement = document.querySelector('.js-subscribe-button');
 
             if (buttonElement.innerHTML === 'Subscribe'){
-                buttonElement.innerHTML = 'Subscribed'
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subscribed');
             } else {
-                buttonElement.innerHTML = 'Subscribe'
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed');
             }
         }
 
